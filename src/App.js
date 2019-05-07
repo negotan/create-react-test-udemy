@@ -10,17 +10,17 @@ const App = () => {
     <div>
       {
         profiles.map((profile, index) => {
-          return <User name={profile.name} age={profile.age} key={index}/>;
+          return <User name={profile.name} age={profile.age} keys={index} key={index}/>;
         })
       }
     </div>
   );
 };
 
-const User = props => {
+const User = (props) => {
   return (
     <div>
-      Hi, I am "{props.name}", and "{props.age}" years old.
+      "{props.keys}"Hi, I am "{props.name}", and "{props.age}" years old.
     </div>
   );
 };
